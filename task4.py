@@ -23,3 +23,20 @@ Enter total payments for month(2)  : 75
 Your closing balance is $51.51
 
 """
+z = 0
+w = 0
+for i in range(1, 13):
+    x = int(input(f"Enter the total purchases for month({i}): "))
+    y = int(input(f"Enter the total payments for month({i}): "))
+    if x > y:
+        I = (x-y+z)*0.02
+        p = x-y+I+z
+        I = round(I, 2)
+        p = round(p, 2)
+        print(f"2% interest has been charge: {I}")
+        print(f"Your closing balance is ${p}")
+        z = z+p
+    elif x == y:
+        print("You have no unpaid balance")
+    else:
+        print("Invalid balance")
